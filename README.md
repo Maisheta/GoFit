@@ -1,4 +1,4 @@
-# gofit
+# GoFit
 
 A new Flutter project.
 
