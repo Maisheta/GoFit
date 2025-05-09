@@ -47,7 +47,6 @@ class _NotificationSettingsState extends State<NotificationSettings> {
             SizedBox(height: 30),
             ElevatedButton(
               onPressed: () {
-                // ممكن تضيف حفظ في Local أو Firebase
                 ScaffoldMessenger.of(
                   context,
                 ).showSnackBar(SnackBar(content: Text('Settings saved!')));
