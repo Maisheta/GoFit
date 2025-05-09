@@ -254,9 +254,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           fontWeight: FontWeight.w700,
                         ),
                       ),
-                      SizedBox(
-                        height: 12,
-                      ), // تقليل الفاصل بين العنوان وقائمة الدورات
+                      SizedBox(height: 12),
                       SizedBox(
                         height: 160,
                         child: ListView.builder(
@@ -266,17 +264,15 @@ class _HomeScreenState extends State<HomeScreen> {
                             final course = popularCourses[index];
                             return Container(
                               width: 140,
-                              margin: EdgeInsets.only(
-                                right: 16,
-                              ), // الفاصل بين كل عنصر وآخر
+                              margin: EdgeInsets.only(right: 16),
                               decoration: BoxDecoration(
                                 color: Colors.white,
                                 borderRadius: BorderRadius.circular(12),
                                 boxShadow: [
                                   BoxShadow(
                                     color: Colors.black12,
-                                    blurRadius: 6, // زيادة درجة الضبابية
-                                    offset: Offset(0, 2), // التأثير العمودي
+                                    blurRadius: 6,
+                                    offset: Offset(0, 2),
                                   ),
                                 ],
                               ),
@@ -298,18 +294,15 @@ class _HomeScreenState extends State<HomeScreen> {
                                     padding: const EdgeInsets.symmetric(
                                       horizontal: 8.0,
                                       vertical: 4.0,
-                                    ), // تقليل padding الأفقي والعمودي
+                                    ),
                                     child: Text(
                                       course['title'],
                                       style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                         fontSize: 14,
-                                        overflow:
-                                            TextOverflow
-                                                .ellipsis, // للتأكد من أن العنوان لا يخرج عن الحدود
+                                        overflow: TextOverflow.ellipsis,
                                       ),
-                                      maxLines:
-                                          1, // يحدد عرض العنوان في سطر واحد فقط
+                                      maxLines: 1,
                                     ),
                                   ),
                                 ],
@@ -318,7 +311,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           },
                         ),
                       ),
-                      SizedBox(height: 16), // تقليل الفاصل بعد القائمة
+                      SizedBox(height: 16),
                       // Daily Goals
                       Text(
                         'Your Daily Goals',
@@ -341,12 +334,18 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       SizedBox(height: 12),
                       ElevatedButton.icon(
-                        onPressed: () {
-                          Navigator.push(
+                        onPressed: () async {
+                          final result = await Navigator.push(
                             context,
                             MaterialPageRoute(builder: (_) => SetGoalScreen()),
                           );
+
+                          if (result == true) {
+                            await _getUserGoals();
+                            setState(() {});
+                          }
                         },
+
                         icon: Icon(Icons.flag),
                         label: Text('Set Goals'),
                         style: ElevatedButton.styleFrom(
