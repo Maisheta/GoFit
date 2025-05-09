@@ -6,7 +6,6 @@ import '../home/main_navigation.dart';
 import 'register_screen.dart';
 import 'forgot_password_screen.dart';
 
-
 class LoginScreen extends StatefulWidget {
   @override
   _LoginScreenState createState() => _LoginScreenState();
@@ -33,10 +32,8 @@ class _LoginScreenState extends State<LoginScreen> {
     try {
       await _auth.signInWithEmailAndPassword(email: email, password: password);
 
-      // إنشاء بيانات Firestore لو مش موجودة
       await _createUserDataIfNotExists();
 
-      // التوجيه إلى صفحة الإعدادات بعد تسجيل الدخول
       Navigator.pushAndRemoveUntil(
         context,
         MaterialPageRoute(builder: (_) => MainNavigation()),
@@ -63,7 +60,7 @@ class _LoginScreenState extends State<LoginScreen> {
       await userDoc.set({
         'username': user.email?.split('@')[0] ?? 'User',
         'email': user.email,
-        'profileImageUrl': '', // صورة فاضية مبدئيًا
+        'profileImageUrl': '',
         'steps': 0,
         'calories': 0,
         'joinedAt': DateTime.now(),
@@ -163,3 +160,4 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 }
+
