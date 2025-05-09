@@ -48,7 +48,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
       User? user = userCredential.user;
 
       if (user != null) {
-        // ✅ حفظ البيانات في Firestore بعد التسجيل
         await FirebaseFirestore.instance.collection('users').doc(user.uid).set({
           'username': user.email?.split('@')[0] ?? 'User',
           'email': user.email,
@@ -59,7 +58,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
         });
       }
 
-      // ✅ الانتقال للتطبيق
       Navigator.pushAndRemoveUntil(
         context,
         MaterialPageRoute(builder: (_) => MainNavigation()),
