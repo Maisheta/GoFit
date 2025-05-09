@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart'; // لتنسيق الوقت
+import 'package:intl/intl.dart';
 
 class NotificationsScreen extends StatelessWidget {
   @override
@@ -63,7 +63,7 @@ class NotificationsScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(data['desc'] ?? 'No Description'),
-                    SizedBox(height: 5), // فصل بين النصوص
+                    SizedBox(height: 5),
                     Text(
                       formattedTime,
                       style: TextStyle(color: Colors.grey, fontSize: 12),
