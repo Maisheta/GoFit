@@ -25,6 +25,7 @@ class _SetGoalScreenState extends State<SetGoalScreen> {
       ScaffoldMessenger.of(
         context,
       ).showSnackBar(SnackBar(content: Text('Goals updated!')));
+      Navigator.pop(context, true);
     } catch (e) {
       ScaffoldMessenger.of(
         context,
