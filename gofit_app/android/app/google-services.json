@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "525916185463",
+    "project_id": "gofit-fd5d2",
+    "storage_bucket": "gofit-fd5d2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:525916185463:android:bd7ef7fa5708f8cbd1b772",
+        "android_client_info": {
+          "package_name": "com.example.fitness_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "525916185463-l8ltcpq9tujgqsc83j808637ndkeep8a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fitness_app",
+            "certificate_hash": "df3f621f89654d1fb7c5a6e9b3b8ab9decc56343"
+          }
+        },
+        {
+          "client_id": "525916185463-p3qm27dlc6nje3gfnhetqs8ekkr36ejr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkAfj4YkQxdwe8ZkbyZSo4XgSrLzXdmCw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "525916185463-p3qm27dlc6nje3gfnhetqs8ekkr36ejr.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "525916185463-hrq6fmgr21t2o6a97v4ve5mj044nvtsj.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.fitnessApp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:525916185463:android:4a8c53d69ba7d8a7d1b772",
+        "android_client_info": {
+          "package_name": "com.example.gofit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "525916185463-rn4mnbccp9ndp0r2v5ke58ui1vok0nm5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.gofit",
+            "certificate_hash": "df3f621f89654d1fb7c5a6e9b3b8ab9decc56343"
+          }
+        },
+        {
+          "client_id": "525916185463-p3qm27dlc6nje3gfnhetqs8ekkr36ejr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkAfj4YkQxdwe8ZkbyZSo4XgSrLzXdmCw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "525916185463-p3qm27dlc6nje3gfnhetqs8ekkr36ejr.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "525916185463-hrq6fmgr21t2o6a97v4ve5mj044nvtsj.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.fitnessApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
